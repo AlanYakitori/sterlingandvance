@@ -32,7 +32,7 @@ const traducciones = {
     pago_fecha: "Fecha (MM/AA)",
     pago_cvv: "CVV",
     pago_btn: "Procesar Pago Seguro",
-    footer_texto: "2026 Baume & Mercier. Todos los derechos reservados. Proyecto Académico.",
+    footer_texto: "2026 Baume & Mercier. Todos los derechos reservados. OcampoEduardo PeñalozaJesús CruztitlaAlan.",
     btn_cool: "Otras páginas cool"
   },
   en: {
@@ -58,7 +58,7 @@ const traducciones = {
     pago_fecha: "Exp. Date (MM/YY)",
     pago_cvv: "CVV",
     pago_btn: "Process Secure Payment",
-    footer_texto: "2026 Baume & Mercier. All rights reserved. Academic Project.",
+    footer_texto: "2026 Baume & Mercier. All rights reserved. OcampoEduardo PeñalozaJesús CruztitlaAlan.",
     btn_cool: "Other cool pages"
   }
 };
@@ -86,7 +86,7 @@ export default function IndexPage() {
       await setDoc(doc(db, "usuarios_landing", userCredential.user.uid), {
         nombre, correo, fechaRegistro: new Date().toISOString()
       });
-      alert(idioma === "es" ? "¡Datos guardados en Firebase!" : "Data saved to Firebase!");
+      alert(idioma === "es" ? "¡Datos guardados correctamente en una base de datos" : "Data saved to Successful!");
       setNombre(""); setCorreo(""); setPassword("");
     } catch (error: any) {
       alert("Error: " + error.message);
@@ -151,7 +151,7 @@ export default function IndexPage() {
           <p className="text-gray-500 mb-8 max-w-md text-xs leading-relaxed tracking-wider normal-case">{t.hero_sub}</p>
           <a href="#colecciones" className="inline-block border border-black px-10 py-4 text-[10px] font-bold tracking-[0.3em] hover:bg-black hover:text-white transition-all">{t.btn_explorar}</a>
         </div>
-        <div className="w-full md:w-1/2 relative h-[500px]">
+        <div className="w-full md:w-1/2 relative h-500px">
           <Image src="/reloj.png" alt="Reloj Principal" fill className="object-contain" />
         </div>
       </section>
